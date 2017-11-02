@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.chen</groupId>
+  <artifactId>spring-springmvc-mybatis</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>spring-springmvc-mybatis Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build-sourceEncoding>UTF-8</project.build-sourceEncoding>
+    <project.reporting-outputEncoding>UTF-8</project.reporting-outputEncoding>
+    <spring.version>4.3.5.RELEASE</spring.version>
+    <mybatis.version>3.4.1</mybatis.version>
+    <javaee.version>7.0</javaee.version>
+    <net.sf.json>2.4</net.sf.json>
+    <mysql.version>5.1.41</mysql.version>
+    <pagehelper.varsion>4.1.0</pagehelper.varsion>
+    <mybatis.spring.version>1.3.1</mybatis.spring.version>
+    <commons-dbcp.version>1.2.2</commons-dbcp.version>
+    <aspectj.version>1.8.6</aspectj.version>
+    <jackson.version>2.9.0</jackson.version>
+  </properties>
+
+  <dependencies>
+
+    <!--java ee 依赖-->
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee.version}</version>
+    </dependency>
+
+    <!--json 依赖-->
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <version>${net.sf.json}</version>
+    </dependency>
+
+
+    <!--mysql 数据库-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <!--数据库连接池-->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>${commons-dbcp.version}</version>
+    </dependency>
+
+    <!--mybatis 依赖-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    <!--mybatis 分页查询插件-->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>${pagehelper.varsion}</version>
+    </dependency>
+
+    <!--整合mybatis和spring-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatis.spring.version}</version>
+    </dependency>
+
+    <!--spring 依赖-->
+    <!--底层核心-提供IOC-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+    <!--单元测试-->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>RELEASE</version>
+      </dependency>
+
+    <!--jackson 依赖-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <finalName>spring-springmvc-mybatis</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
